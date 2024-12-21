@@ -1,0 +1,38 @@
+how to use:
+s21_cat:
+# Print contents of a file
+./s21_cat file.txt
+
+# Print with line numbers
+./s21_cat -n file.txt
+
+# Print with non-empty line numbers
+./s21_cat -b file.txt
+
+# Squeeze multiple blank lines
+./s21_cat -s file.txt
+------------------------------------------
+s21_grep:
+# Search for a pattern in a file
+./s21_grep -e "pattern" file.txt
+
+# Ignore case while searching
+./s21_grep -e "pattern" -i file.txt
+
+# Count matching lines
+./s21_grep -e "pattern" -c file.txt
+
+# Print filenames with matches
+./s21_grep -e "pattern" -l file1.txt file2.txt
+
+# Print line numbers with matches
+./s21_grep -e "pattern" -n file.txt
+
+
+./s21_cat file.txt > output.txt
+cat file.txt > expected.txt
+diff output.txt expected.txt
+------------------------------------
+./s21_grep -e "pattern" file.txt > output.txt
+grep "pattern" file.txt > expected.txt
+diff output.txt expected.txt
